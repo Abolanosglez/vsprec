@@ -43,7 +43,7 @@ def sign_url(token: str, url: URL):
     return url.with_path(path).with_query(query)
 
 def nameRamdom():
-    populaton = 'abcdefgh1jklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    populaton = 'abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     name = "".join(random.sample(populaton,10))
     return name
 
@@ -231,7 +231,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('admin_user')
 
         #set in debug
-        tl_admin_user = 'valdes_95'
+        tl_admin_user = 'Abolanos3'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -251,7 +251,7 @@ def onmessage(update,bot:ObigramClient):
         else:
             mensaje = "🚷No tienes acceso🚷"
             reply_markup = inlineKeyboardMarkup(
-                r1=[inlineKeyboardButton('👤Contactar👤',url='https://t.me/Stvz20')]
+                r1=[inlineKeyboardButton('👤Contactar👤',url='https://t.me/Abolanos3')]
             )
             bot.sendMessage(update.message.chat.id,mensaje,reply_markup=reply_markup)
             return
@@ -555,7 +555,7 @@ def atras(update,bot:ObigramClient):
     username = update.data
     reply_markup = inlineKeyboardMarkup(
         r1=[inlineKeyboardButton('📂 ᗩᖇᑕᕼᏆᐯᝪᔑ 📂', callback_data='/ls '+username),
-            inlineKeyboardButton('👤ᔑᝪᑭᝪᖇᎢᗴ👤', url='https://t.me/Stvz20')]
+            inlineKeyboardButton('👤ᔑᝪᑭᝪᖇᎢᗴ👤', url='https://t.me/Abolanos3')]
     )
     bot.editMessageText(update.message,infos.dashboard(),reply_markup=reply_markup)
 
@@ -664,7 +664,7 @@ def main():
     bot_token = os.environ.get('bot_token')
     print('💢Bot iniciado💢')
     #set in debug
-    bot_token = '5628035332:AAHgjooC2dDYmNB1IkTHPVU5mvspSGyMaUc'
+    bot_token = '5810814470:AAHp32qDW5dhYA6Gckd0cJSvZoXSnjFUImQ'
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
     bot.onCallbackData('/atras ',atras)
