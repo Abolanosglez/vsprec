@@ -540,10 +540,10 @@ def onmessage(update,bot:ObigramClient):
             bot.editMessageText(message,"✅Configuracion de Uclv cargada")
         elif '/uvs' in msgText:
             getUser = user_info
-            getUser['moodle_host'] = "https://uvs.ucm.cmw.sld.cu/"
+            getUser['moodle_host'] = "https://uvs.ltu.sld.cu/"
             getUser['uploadtype'] =  "draft"
-            getUser['moodle_user'] = "msosa"
-            getUser['moodle_password'] = "Aa.940313"
+            getUser['moodle_user'] = "pedroamh01"
+            getUser['moodle_password'] = "01062862726Aa*"
             getUser['moodle_repo_id'] = 5
             getUser['zips'] = 50
             jdb.save_data_user(username,getUser)
